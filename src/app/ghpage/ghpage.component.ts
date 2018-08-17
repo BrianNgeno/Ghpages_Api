@@ -19,7 +19,7 @@ export class GhpageComponent implements OnInit {
     this.http.get<ApiResponse>('https://api.github.com/users/BrianNgeno?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
       .subscribe(data => {
         console.log(data.avatar_url);
-        this.ghpage = new Ghpage(data.avatar_url);
+        this.ghpage = new Ghpage(data.avatar_url, data.login);
       });
   }
 

@@ -1,3 +1,3 @@
 export class Ghpage {
-  constructor(public ghpage: any) { }
+  constructor(public ghpage: any, public user: string) { }
 }
