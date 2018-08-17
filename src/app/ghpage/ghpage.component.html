@@ -1,9 +1,16 @@
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <ng-progress></ng-progress>
 <div class="container fluid" id="main">
   <div class="row">
     <div class="col-md-4">
+      <img src='../../assets/up.gif' id='logo'>
       <h4 id='user'>{{ghpage.user}}</h4>
-    <img src='{{ghpage.ghpage}}' alt='Avatar' style='width:200px' id='view'>
+
+      <img src='{{ghpage.ghpage}}' alt='Avatar' style='width:200px' id='view'>
+    </div>
+    <div class="grid">
+      <div class='col-md-8'>
+        <a href='{{ghpage.repo}}'>REPOS</a>
+      </div>
     </div>
   </div>
-</div>
