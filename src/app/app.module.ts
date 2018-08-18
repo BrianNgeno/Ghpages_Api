@@ -6,11 +6,13 @@ import { GhpageComponent } from './ghpage/ghpage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GhpageComponent
+    GhpageComponent,
+    UserComponent
 
   ],
   imports: [
