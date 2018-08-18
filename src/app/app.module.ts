@@ -13,13 +13,12 @@ import { UserComponent } from './user/user.component';
     AppComponent,
     GhpageComponent,
     UserComponent
-
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
-    NgProgressHttpModule
+    NgProgressHttpModule,
   ],
 
   providers: [],
