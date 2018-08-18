@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Ghpage } from '../ghpage';
 import { Repo } from '../repo';
+import {User} from '../user';
 @Component({
   selector: 'app-ghpage',
   templateUrl: './ghpage.component.html',
@@ -11,6 +12,7 @@ export class GhpageComponent implements OnInit {
   ghpage: Ghpage;
   repo: Repo;
   repos = [];
+  user: User;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -35,7 +37,14 @@ export class GhpageComponent implements OnInit {
           console.log(this.repos);
         }
       });
-
+      this.http.get<ApiResponse>('https://api.github.com/users?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
+        .subscribe(x => {
+          for (let index = 0; index < x.length; index++) {
+            // console.log(y[index].full_name);
+            this.repos.push(this.repo = new Repo(y[index]));
+            console.log(this.repos);
+          }
+        })
   }
 
 }

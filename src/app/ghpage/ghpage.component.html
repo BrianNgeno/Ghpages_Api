@@ -9,11 +9,12 @@
   </div>
 </div>
 
-<div class="jumbotron">
+
   <h4>Repositories</h4>
   <div *ngFor='let repo of repos; let i=index'>
+    <div class="jumbotron">
     <p>{{repo.repo.full_name}}</p>
-    <a href='{{repo.repo.html_url}}'>Live-Link</a>
     <p>{{repo.repo.description}}</p>
+    <a href='{{repo.repo.html_url}}'>Live-Link</a>
   </div>
 </div>
