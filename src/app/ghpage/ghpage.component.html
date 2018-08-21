@@ -1,5 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 <ng-progress></ng-progress>
+<h4>Repositories</h4>
+<app-user></app-user>
 <div class="container fluid" id="main">
   <div class="row">
     <div class="col-md-12">
@@ -8,13 +10,10 @@
     </div>
   </div>
 </div>
-
-
-  <h4>Repositories</h4>
-  <div *ngFor='let repo of repos; let i=index'>
-    <div class="jumbotron">
-    <p>{{repo.repo.full_name}}</p>
-    <p>{{repo.repo.description}}</p>
-    <a href='{{repo.repo.html_url}}'>Live-Link</a>
+<div *ngFor='let repo of repos; let i=index'>
+  <div class="jumbotron">
+    <p>{{repo.cont.full_name}}</p>
+    <p>{{repo.cont.description}}</p>
+    <a href='{{repo.cont.html_url}}'>Live-Link</a>
   </div>
 </div>

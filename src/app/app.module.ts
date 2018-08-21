@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { UserComponent } from './user/user.component';
+import {UserRequestService} from './user-http/user-request.service';
+import {RoutingModule} from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,10 @@ import { UserComponent } from './user/user.component';
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpModule,
+    RoutingModule
   ],
 
-  providers: [],
+  providers: [UserRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

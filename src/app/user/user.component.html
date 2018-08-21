@@ -1,9 +1,20 @@
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 <div class="container">
   <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="get"  #get id='search'>
+    <form>
+      <input type="text" placeholder="Search.." name="get" #get id='search'>
       <input type='button' (click)='Search(get)' id='btn' value='Search'>
     </form>
+  </div>
+</div>
+
+ <div class='jumbotron'>
+  <p>{{this.user.search.login}}</p>
+  <img src='{{this.user.search.avatar_url}}'>
+
+  <div *ngFor='let search of searchs; let i=index'>
+    <ul>
+      <li>{{search.id}}</li>
+    </ul>
   </div>
 </div>
