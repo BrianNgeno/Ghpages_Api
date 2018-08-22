@@ -19,3 +19,11 @@ img {
   border-radius: 50%;
   image-resolution: 5px;
 }
+ul{
+  list-style: none;
+}
+.jumbotron{
+  color:white;
+  background-color: black;
+  opacity: 0.9;
+}

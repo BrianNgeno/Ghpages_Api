@@ -14,7 +14,9 @@
 
   <div *ngFor='let search of searchs; let i=index'>
     <ul>
-      <li>{{this.search.full_name}}</li>
+      <li>{{search.rist.full_name}}</li>
+      <li>{{search.rist.description}}</li>
+      <a href='{{search.rist.html_url}}'>Live Link</a>
     </ul>
   </div>
 </div>

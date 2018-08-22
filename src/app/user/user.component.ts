@@ -14,6 +14,7 @@ import { Search } from '../search';
 export class UserComponent implements OnInit {
   user: User;
   search: Search;
+  searchs = [];
 
   constructor(private http: HttpClient) { }
   User = new User('');
@@ -31,8 +32,8 @@ export class UserComponent implements OnInit {
     this.http.get<Object>('https://api.github.com/users/' + get.value + '/repos')
       .subscribe(y => {
         for (let index = 0; index < y.length; index++) {
-          this.search = new Search(y[index]);
-          console.log(y[index].full_name);
+        this.searchs.push(this.search = new Search(y[index]));
+          console.log(y[index]);
         }
       });
   }
