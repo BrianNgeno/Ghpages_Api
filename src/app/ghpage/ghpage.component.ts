@@ -38,11 +38,7 @@ export class GhpageComponent implements OnInit {
       length: any;
       html_url: any;
 }
-  // this.http.get<ApiResponse>('https://api.github.com/users/BrianNgeno?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
-  //   .subscribe(data => {
-  //     this.ghpage = new Ghpage(data.avatar_url, data.login);
-  //   });
-  this.http.get<ApiResponse>('https://api.github.com/users/BrianNgeno/repos?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
+    this.http.get<ApiResponse>('https://api.github.com/users/BrianNgeno/repos?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
     .subscribe(y => {
       for (let index = 0; index < y.length; index++) {
   // console.log(y[index].full_name);

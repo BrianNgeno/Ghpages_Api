@@ -17,6 +17,7 @@ export class UserComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
   User = new User('');
+  // Search = new Search('');
 
   Search(get) {
     this.http.get<object>('https://api.github.com/users/' + get.value + '?access_token=2b123e7e188464c6df4b5cc9e1b95747706d4bc1')
@@ -31,7 +32,7 @@ export class UserComponent implements OnInit {
       .subscribe(y => {
         for (let index = 0; index < y.length; index++) {
           this.search = new Search(y[index]);
-          console.log(y[index]);
+          console.log(y[index].full_name);
         }
       });
   }
