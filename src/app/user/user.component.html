@@ -15,7 +15,7 @@
 <h4>Github_Repositories</h4>
   <div *ngFor='let search of searchs; let i=index'>
     <ul>
-      <li id="{{i}}" HighlightDirective>{{search.rist.full_name}}</li>
+      <li>{{search.rist.full_name}}</li>
       <li>{{search.rist.description}}</li>
       <a href='{{search.rist.html_url}}'>Live Link</a>
     </ul>
